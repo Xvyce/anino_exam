@@ -8,12 +8,12 @@ public class Wheel2 : Singleton<Wheel2>
     [System.Serializable]
     public class WeightedValue
     {
-        public int Price; // The Reward Multiplier
+        public int Prize; // The Reward Multiplier
         public float Weight; // The Chance of getting that multiplier
 
         public WeightedValue(int value, float weight)
         {
-            Price = value;
+            Prize = value;
             Weight = weight;
         }
     }
@@ -48,7 +48,7 @@ public class Wheel2 : Singleton<Wheel2>
             // add kvp.Key to the list kvp.value times
             for (var i = 0; i < kvp.Weight; i++)
             {
-                _weightedList.Add(kvp.Price);
+                _weightedList.Add(kvp.Prize);
             }
         }
     }
@@ -78,7 +78,7 @@ public class Wheel2 : Singleton<Wheel2>
         var randomTime = Random.Range(minSpin, maxSpin);
         var itemNumber = GetRandomNumber();
 
-        var itemIndex = PricesWithWeights.FindIndex(w => w.Price == itemNumber);
+        var itemIndex = PricesWithWeights.FindIndex(w => w.Prize == itemNumber);
         var itemNumberAngle = itemIndex * _anglePerItem;
         var currentAngle = transform.eulerAngles.z;
         // reset/clamp currentAngle to a value 0-360 since itemNumberAngle will be in this range
@@ -107,7 +107,6 @@ public class Wheel2 : Singleton<Wheel2>
         }
     }
 
-    float yVelocity = 0;
     // spins the wheel from the given fromAngle until the given toAngle within withinSeconds seconds
     private IEnumerator SpinTheWheel(float fromAngle, float toAngle, float withinSeconds, int result)
     {

@@ -1675,5 +1675,65 @@ PrefabInstance:
       propertyPath: PlayButton
       value: 
       objectReference: {fileID: 821638651}
+    - target: {fileID: 6901754873555601513, guid: 06e90c6b0705a39449d8f980ae7eac32, type: 3}
+      propertyPath: PricesWithWeights.Array.data[0].Prize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901754873555601513, guid: 06e90c6b0705a39449d8f980ae7eac32, type: 3}
+      propertyPath: PricesWithWeights.Array.data[1].Prize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901754873555601513, guid: 06e90c6b0705a39449d8f980ae7eac32, type: 3}
+      propertyPath: PricesWithWeights.Array.data[2].Prize
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901754873555601513, guid: 06e90c6b0705a39449d8f980ae7eac32, type: 3}
+      propertyPath: PricesWithWeights.Array.data[3].Prize
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901754873555601513, guid: 06e90c6b0705a39449d8f980ae7eac32, type: 3}
+      propertyPath: PricesWithWeights.Array.data[4].Prize
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901754873555601513, guid: 06e90c6b0705a39449d8f980ae7eac32, type: 3}
+      propertyPath: PricesWithWeights.Array.data[5].Prize
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901754873555601513, guid: 06e90c6b0705a39449d8f980ae7eac32, type: 3}
+      propertyPath: PricesWithWeights.Array.data[6].Prize
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901754873555601513, guid: 06e90c6b0705a39449d8f980ae7eac32, type: 3}
+      propertyPath: PricesWithWeights.Array.data[7].Prize
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901754873555601513, guid: 06e90c6b0705a39449d8f980ae7eac32, type: 3}
+      propertyPath: PricesWithWeights.Array.data[1].Weight
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901754873555601513, guid: 06e90c6b0705a39449d8f980ae7eac32, type: 3}
+      propertyPath: PricesWithWeights.Array.data[2].Weight
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901754873555601513, guid: 06e90c6b0705a39449d8f980ae7eac32, type: 3}
+      propertyPath: PricesWithWeights.Array.data[3].Weight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901754873555601513, guid: 06e90c6b0705a39449d8f980ae7eac32, type: 3}
+      propertyPath: PricesWithWeights.Array.data[4].Weight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901754873555601513, guid: 06e90c6b0705a39449d8f980ae7eac32, type: 3}
+      propertyPath: PricesWithWeights.Array.data[5].Weight
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901754873555601513, guid: 06e90c6b0705a39449d8f980ae7eac32, type: 3}
+      propertyPath: PricesWithWeights.Array.data[6].Weight
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901754873555601513, guid: 06e90c6b0705a39449d8f980ae7eac32, type: 3}
+      propertyPath: PricesWithWeights.Array.data[7].Weight
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06e90c6b0705a39449d8f980ae7eac32, type: 3}

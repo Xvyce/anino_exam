@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Bet : Singleton<Bet>
 {
 
-    private int[] BetValue = { 1, 2, 5, 10 };
+    public int[] BetValue = { 1, 2, 5, 10 };
 
     int i=0;
     public Text BetNumber;

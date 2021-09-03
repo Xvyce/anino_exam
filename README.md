@@ -6,7 +6,7 @@
 - Coins - Controls the coins system to the UI
 - Wheel2 - Manages the whole wheel system. The duration, spins, weights and prizes of the game. 
 - Singleton - Helps in passing around references
-- Audio/AudioManager - Selfexplanatory, manages the sounds.
+- Audio/AudioManager - Self-explanatory, manages the sounds.
 
 ## GameObjects and Inspector
 - The GameManager Gameobject has the CoinManager and Bet script. The current coins and Bets can be adjusted on the inspector of this gameobject.

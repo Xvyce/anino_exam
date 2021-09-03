@@ -21,7 +21,7 @@ public class Bet : Singleton<Bet>
 
     public void plusButton()
     {
-
+        AudioManager.Instance.Play("plus");
         if (i >= BetValue.Length-1)
         {
             i = 0;
@@ -40,6 +40,7 @@ public class Bet : Singleton<Bet>
 
     public void minusButton()
     {
+        AudioManager.Instance.Play("minus");
         if (i < 1)
         {
             i = BetValue.Length - 1;

@@ -1497,14 +1497,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dd2259b10d177d408d587cffa0822c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weightOf1: 30
-  weightOf2: 20
-  weightOf3: 15
-  weightOf4: 10
-  weightOf5: 10
-  weightOf6: 5
-  weightOf7: 5
-  weightOf8: 5
+  PricesWithWeights:
+  - Value: 1
+    Weight: 30
+  - Value: 2
+    Weight: 20
+  - Value: 3
+    Weight: 10
+  - Value: 4
+    Weight: 5
+  - Value: 5
+    Weight: 5
+  - Value: 6
+    Weight: 2
+  - Value: 7
+    Weight: 2
+  - Value: 8
+    Weight: 1
   SpinDuration: 3
   maxSpin: 6
   minSpin: 2

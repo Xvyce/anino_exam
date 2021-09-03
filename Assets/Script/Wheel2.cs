@@ -3,52 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class WeightedValue
-{
-    public int Value;
-    public float Weight;
-
-
-    public WeightedValue(int value, float weight)
-    {
-        Value = value;
-        Weight = weight;
-    }
-
-    public int weyt;
-}
-
-public class PricesWithWeights
-{
-    public List<WeightedValue> pricesWithWeights = new List<WeightedValue>
-{ 
-    //               Value | Weight TODO: Make sure these sum up to 100
-    new WeightedValue(1,        Wheel2.Instance.weightOf1),
-    new WeightedValue(2,        35),
-    new WeightedValue(3,        30),
-    new WeightedValue(4,        20),
-    new WeightedValue(5,        15),
-    new WeightedValue(6,        10),
-    new WeightedValue(7,        10),
-    new WeightedValue(8,        5),
-};
-}
-
     public class Wheel2 : Singleton<Wheel2>
     {
-        public PricesWithWeights pricesWithWeights = new PricesWithWeights();
-        public int weightOf1;
-        public int weightOf2;
-        public int weightOf3;
-        public int weightOf4;
-        public int weightOf5;
-        public int weightOf6;
-        public int weightOf7;
-        public int weightOf8;
-        // seconds one complete rotation shall take
-        // adjust in the Inspector
+    [System.Serializable]
+    public class WeightedValue
+    {
+        public int Value;
+        public float Weight;
 
-        public float SpinDuration = 5;
+        public WeightedValue(int value, float weight)
+        {
+            Value = value;
+            Weight = weight;
+        }
+    }
+
+    public List<WeightedValue> PricesWithWeights;
+
+    // seconds one complete rotation shall take
+    // adjust in the Inspector
+
+    public float SpinDuration = 5;
         public int maxSpin;
         public int minSpin;
 
@@ -66,10 +41,10 @@ public class PricesWithWeights
         private void Start()
         {
             _spinning = false;
-            _anglePerItem = 360f / pricesWithWeights.pricesWithWeights.Count;
+            _anglePerItem = 360f / PricesWithWeights.Count;
 
             // first fill the randomResults accordingly to the given wheights
-            foreach (var kvp in pricesWithWeights.pricesWithWeights)
+            foreach (var kvp in PricesWithWeights)
             {
                 // add kvp.Key to the list kvp.value times
                 for (var i = 0; i < kvp.Weight; i++)
@@ -111,7 +86,7 @@ public class PricesWithWeights
 
             // find the original index of the selected random value
             // and its angle by multiplying by anglePerItem
-            var itemIndex = pricesWithWeights.pricesWithWeights.FindIndex(w => w.Value == itemNumber);
+            var itemIndex = PricesWithWeights.FindIndex(w => w.Value == itemNumber);
             var itemNumberAngle = itemIndex * _anglePerItem;
             var currentAngle = transform.eulerAngles.z;
             // reset/clamp currentAngle to a value 0-360 since itemNumberAngle will be in this range
@@ -129,7 +104,7 @@ public class PricesWithWeights
             var targetAngle = -(itemNumberAngle + 360f * randomTime);
 
             Debug.Log($"Will spin {randomTime } times before ending at {itemNumber} with an angle of {itemNumberAngle}", this);
-            Debug.Log($"The odds for this were {pricesWithWeights.pricesWithWeights[itemIndex].Weight / 100f:P} !");
+            Debug.Log($"The odds for this were {PricesWithWeights[itemIndex].Weight / 100f:P} !");
 
             // now pass it all on
             if (StartSpin == true)
